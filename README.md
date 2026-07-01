@@ -4,7 +4,9 @@ DocTrace AI is a public portfolio demo for **Fredy Gimenez** showing a document-
 
 ## Public demo
 
-Vercel URL will be added after deployment.
+Public demo: https://doctrace-ai.vercel.app
+
+GitHub: https://github.com/JuanCG13/fredy-doctrace-ai
 
 ## What it demonstrates
 

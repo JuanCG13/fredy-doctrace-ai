@@ -7,3 +7,4 @@ demo-output/
 .vercel/
 tsconfig.tsbuildinfo
 .DS_Store
+.vercel
