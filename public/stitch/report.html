@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operations Risk Brief - DocTrace AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#f9f9ff",
+                        "tertiary": "#b299ff",
+                        "on-primary-fixed": "#00121d",
+                        "background": "#070e1c",
+                        "surface-tint": "#7bd0ff",
+                        "on-background": "#dce5ff",
+                        "error-dim": "#c54d4a",
+                        "on-tertiary-fixed": "#000000",
+                        "on-surface-variant": "#9cabcf",
+                        "error-container": "#871f21",
+                        "on-error": "#490006",
+                        "on-primary-fixed-variant": "#003a50",
+                        "primary-container": "#22b1ec",
+                        "on-secondary-fixed": "#004a1d",
+                        "surface-variant": "#162542",
+                        "secondary-container": "#00461b",
+                        "on-tertiary-container": "#230062",
+                        "tertiary-fixed": "#a589f8",
+                        "on-primary-container": "#002b3d",
+                        "secondary": "#4ae176",
+                        "secondary-dim": "#38d36a",
+                        "on-secondary": "#004b1e",
+                        "error": "#fa746f",
+                        "on-surface": "#dce5ff",
+                        "inverse-primary": "#00668b",
+                        "surface-container-low": "#091326",
+                        "surface-bright": "#1d2c49",
+                        "on-tertiary-fixed-variant": "#2e007c",
+                        "tertiary-container": "#a589f8",
+                        "primary-fixed": "#2db7f2",
+                        "primary": "#7bd0ff",
+                        "secondary-fixed": "#6bff8f",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary": "#31067e",
+                        "tertiary-fixed-dim": "#987cea",
+                        "on-error-container": "#ff9993",
+                        "surface-dim": "#070e1c",
+                        "surface": "#070e1c",
+                        "primary-fixed-dim": "#05a9e3",
+                        "secondary-fixed-dim": "#5bf083",
+                        "on-primary": "#004560",
+                        "inverse-on-surface": "#4e5566",
+                        "surface-container-high": "#121f38",
+                        "surface-container": "#0e192f",
+                        "on-secondary-container": "#41da70",
+                        "on-secondary-fixed-variant": "#006a2d",
+                        "outline": "#677597",
+                        "primary-dim": "#2db7f2",
+                        "outline-variant": "#394867",
+                        "surface-container-highest": "#162542",
+                        "tertiary-dim": "#a88cfb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant dark:border-outline-variant flex flex-col p-4 overflow-y-auto z-50">
+<div class="flex items-center gap-3 mb-8 px-2">
+<span class="material-symbols-outlined text-primary dark:text-primary text-3xl" data-weight="fill">psychology</span>
+<div>
+<h1 class="text-xl font-headline font-bold text-primary dark:text-primary tracking-tight">DocTrace AI</h1>
+<p class="text-xs text-on-surface-variant font-label">Enterprise Intelligence</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform rounded-lg font-medium text-sm font-body" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform rounded-lg font-medium text-sm font-body" href="#">
+<span class="material-symbols-outlined">upload_file</span>
+<span>Upload</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform rounded-lg font-medium text-sm font-body" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span>Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform rounded-lg font-medium text-sm font-body" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span>Ask RAG</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-medium hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform text-sm font-body" href="#">
+<span class="material-symbols-outlined">summarize</span>
+<span>Report Builder</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform rounded-lg font-medium text-sm font-body" href="#">
+<span class="material-symbols-outlined">file_download</span>
+<span>Exports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 scale-95 active:scale-90 transition-transform rounded-lg font-medium text-sm font-body mt-auto" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="ml-64 flex-1 flex flex-col h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-40 border-b border-outline-variant dark:border-outline-variant bg-surface/80 backdrop-blur-md flex justify-between items-center h-16 px-6">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-sm font-label text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Document Intelligence</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface font-medium">Generated Report</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-sm font-label font-medium">
+<a class="text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Docs</a>
+<a class="text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Support</a>
+</div>
+<div class="h-4 w-px bg-outline-variant mx-2"></div>
+<button class="bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded text-xs font-bold font-headline uppercase tracking-wider hover:bg-primary/20 transition-colors">
+                    Demo Mode
+                </button>
+<div class="flex items-center gap-3">
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Scrollable Workspace -->
+<main class="flex-1 overflow-hidden flex flex-col bg-background">
+<!-- Content Grid (Center Col + Right Panel) -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Central Report Column -->
+<div class="flex-1 overflow-y-auto p-8 lg:p-12 border-r border-outline-variant">
+<div class="max-w-3xl mx-auto space-y-8">
+<!-- Report Header Card -->
+<div class="bg-surface-container-high rounded-xl p-6 border border-outline-variant flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-3xl font-headline font-bold text-on-surface mb-2">Operations Risk Brief</h2>
+<p class="text-sm text-on-surface-variant font-label flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                        Generated from 4 indexed documents • 2 mins ago
+                                    </p>
+</div>
+<div class="flex flex-col items-end gap-3">
+<div class="flex items-center gap-2 bg-secondary-container/30 border border-secondary/30 text-secondary px-3 py-1 rounded-full text-xs font-bold font-label">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                        Grounding Score: 98%
+                                    </div>
+<div class="flex gap-2">
+<button class="bg-primary text-on-primary font-medium text-sm px-4 py-2 rounded-lg hover:bg-primary-dim transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-sm">markdown</span>
+                                            Export Markdown
+                                        </button>
+<button class="bg-surface-container-highest text-on-surface font-medium text-sm px-4 py-2 rounded-lg border border-outline-variant hover:bg-surface-bright transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+                                            Export PDF
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Report Body -->
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant shadow-sm space-y-10">
+<!-- Executive Summary -->
+<section>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-4 pb-2 border-b border-outline-variant/50">Executive Summary</h3>
+<p class="text-on-surface-variant text-base leading-relaxed">
+                                    The current operational review indicates stable core performance across Q3. However, supply chain dependencies have introduced latency in fulfillment cycles. Recent audits confirm compliance with internal data handling protocols, though third-party integration points remain a vulnerability.
+                                    <span class="inline-flex items-center gap-1 bg-surface-container-highest border border-outline-variant text-xs px-1.5 py-0.5 rounded text-tertiary-fixed ml-1 cursor-pointer hover:bg-surface-bright transition-colors" title="View Source">
+                                        [DOC-02 §4]
+                                    </span>
+</p>
+</section>
+<!-- Key Facts -->
+<section>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-4 pb-2 border-b border-outline-variant/50">Key Facts</h3>
+<ul class="list-disc pl-5 space-y-3 text-on-surface-variant text-base leading-relaxed marker:text-primary">
+<li>Infrastructure uptime maintained at 99.98% exceeding SLA targets.</li>
+<li>Vendor attrition rate increased by 4% year-over-year.
+                                        <span class="inline-flex items-center gap-1 bg-surface-container-highest border border-outline-variant text-xs px-1.5 py-0.5 rounded text-tertiary-fixed ml-1 cursor-pointer hover:bg-surface-bright transition-colors" title="View Source">
+                                            [CON-03 §7]
+                                        </span>
+</li>
+<li>Cloud expenditure optimized, yielding a 12% cost reduction in non-production environments.</li>
+</ul>
+</section>
+<!-- Risks (Highlighted) -->
+<section>
+<h3 class="text-xl font-headline font-semibold text-error mb-4 pb-2 border-b border-error-container/50 flex items-center gap-2">
+<span class="material-symbols-outlined">warning</span>
+                                    Vendor Onboarding Risks
+                                </h3>
+<div class="bg-error-container/10 border border-error-container rounded-lg p-5">
+<p class="text-on-surface-variant text-base leading-relaxed">
+                                        The revised onboarding checklist lacks explicit verification steps for SOC-2 Type II compliance for sub-processors. This omission creates a potential regulatory exposure if client data is mishandled downstream.
+                                        <span class="inline-flex items-center gap-1 bg-surface-container-highest border border-outline-variant text-xs px-1.5 py-0.5 rounded text-tertiary-fixed ml-1 cursor-pointer hover:bg-surface-bright transition-colors" title="View Source">
+                                            [POL-01 §2]
+                                        </span>
+</p>
+</div>
+</section>
+<!-- Next Steps -->
+<section>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-4 pb-2 border-b border-outline-variant/50">Recommended Next Steps</h3>
+<div class="space-y-3">
+<div class="flex items-start gap-3 p-3 bg-surface-container rounded-lg border border-outline-variant/30">
+<div class="mt-0.5 text-primary"><span class="material-symbols-outlined text-lg">check_circle</span></div>
+<div>
+<h4 class="font-medium text-on-surface text-sm mb-1">Update Procurement Policy</h4>
+<p class="text-xs text-on-surface-variant">Mandate SOC-2 verification in the primary vendor checklist.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Right Sidebar: Evidence Panel -->
+<aside class="w-80 bg-surface-container-low border-l border-outline-variant flex flex-col overflow-hidden">
+<div class="p-4 border-b border-outline-variant bg-surface-container/50 flex justify-between items-center">
+<h3 class="font-headline font-semibold text-on-surface flex items-center gap-2 text-sm">
+<span class="material-symbols-outlined text-tertiary">plagiarism</span>
+                            Source Evidence
+                        </h3>
+<span class="text-xs bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant font-label">3 Citations</span>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Evidence Card 1 -->
+<div class="bg-surface-container rounded-lg border border-outline-variant/50 p-4 hover:border-tertiary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="bg-tertiary/20 text-tertiary-fixed text-[10px] font-bold px-1.5 py-0.5 rounded">DOC-02</span>
+<span class="text-xs text-on-surface-variant font-medium truncate w-32" title="Q3_Ops_Review.pdf">Q3_Ops_Review.pdf</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary text-sm transition-colors">open_in_new</span>
+</div>
+<div class="text-xs text-on-surface-variant font-body leading-relaxed bg-background/50 p-2 rounded border border-outline-variant/30 italic mb-3">
+                                "...supply chain interdependencies have contributed to a measurable latency in fulfillment cycles for Q3, necessitating a review of buffer stock."
+                            </div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] text-on-surface-variant">Relevance Match</span>
+<div class="flex items-center gap-2 w-24">
+<div class="h-1.5 flex-1 bg-surface-bright rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[95%]"></div>
+</div>
+<span class="text-[10px] text-secondary font-medium">95%</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Bottom Trace Timeline -->
+<div class="h-12 border-t border-outline-variant bg-surface-container-highest/50 px-6 flex items-center shrink-0">
+<div class="flex items-center gap-1 w-full max-w-5xl mx-auto text-[10px] font-label text-on-surface-variant uppercase tracking-widest font-semibold">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">data_object</span>
+                        Parsed
+                    </div>
+<div class="h-px bg-outline-variant flex-1 mx-2"></div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">cut</span>
+                        Chunked
+                    </div>
+<div class="h-px bg-outline-variant flex-1 mx-2"></div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">hub</span>
+                        Embedded
+                    </div>
+<div class="h-px bg-outline-variant flex-1 mx-2"></div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">search</span>
+                        Retrieved
+                    </div>
+<div class="h-px bg-outline-variant flex-1 mx-2"></div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">auto_awesome</span>
+                        Generated
+                    </div>
+<div class="h-px bg-outline-variant flex-1 mx-2"></div>
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        Citation Check Passed
+                    </div>
+</div>
+</div>
+</main>
+</div>
+
+<!-- DOCTRACE_INTERACTION_START -->
+<style>
+  .dt-toast{position:fixed;right:24px;bottom:24px;z-index:99999;background:#0e192f;color:#dce5ff;border:1px solid #22b1ec55;border-radius:14px;padding:14px 16px;box-shadow:0 18px 60px #0008;font:500 14px Inter,system-ui;max-width:420px}.dt-toast b{color:#7bd0ff}.dt-panel{position:fixed;top:18px;right:18px;bottom:18px;width:min(520px,calc(100vw - 36px));z-index:99998;background:linear-gradient(180deg,#0e192f,#091326);border:1px solid #394867;border-radius:20px;box-shadow:0 24px 90px #000b;transform:translateX(calc(100% + 32px));transition:.22s ease;display:flex;flex-direction:column;color:#dce5ff;font-family:Inter,system-ui}.dt-panel.open{transform:translateX(0)}.dt-panel header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px;border-bottom:1px solid #24324d}.dt-panel h3{margin:0;color:#f8fbff;font:700 20px 'Space Grotesk',Inter}.dt-panel p{margin:6px 0 0;color:#9cabcf;font-size:13px;line-height:1.5}.dt-panel .body{padding:18px 20px;overflow:auto;display:grid;gap:12px}.dt-close,.dt-btn{border:1px solid #394867;background:#121f38;color:#dce5ff;border-radius:12px;padding:9px 12px;font-weight:700;cursor:pointer}.dt-btn.primary{background:#22b1ec;color:#002b3d;border-color:#7bd0ff}.dt-btn.success{background:#00461b;color:#6bff8f;border-color:#38d36a}.dt-item{border:1px solid #263753;border-radius:14px;background:#091326;padding:14px}.dt-item b{display:block;color:#f8fbff;margin-bottom:5px}.dt-item span{display:block;color:#9cabcf;font-size:13px;line-height:1.45}.dt-actions{display:flex;flex-wrap:wrap;gap:10px}.dt-chip{display:inline-flex;align-items:center;border:1px solid #394867;border-radius:999px;padding:4px 8px;margin:3px;color:#7bd0ff;background:#001b2b;font-size:12px}.dt-modal{position:fixed;inset:0;z-index:99997;background:#020817aa;display:none;place-items:center;padding:24px}.dt-modal.open{display:grid}.dt-card{width:min(720px,100%);background:#0e192f;border:1px solid #394867;border-radius:20px;box-shadow:0 24px 90px #000b;color:#dce5ff;font-family:Inter;padding:22px}.dt-card h3{font:700 22px 'Space Grotesk';margin:0 0 8px}.dt-card textarea{width:100%;min-height:130px;border-radius:14px;border:1px solid #394867;background:#070e1c;color:#dce5ff;padding:12px}.dt-bar{height:7px;background:#162542;border-radius:999px;overflow:hidden}.dt-bar i{display:block;height:100%;background:linear-gradient(90deg,#22b1ec,#4ae176)}
+</style>
+<div class="dt-panel" id="dtPanel"><header><div><h3 id="dtTitle">DocTrace action</h3><p id="dtDesc">Safe portfolio interaction.</p></div><button class="dt-close" data-dt-close>Close</button></header><div class="body" id="dtBody"></div></div>
+<div class="dt-modal" id="dtModal"><div class="dt-card"><h3 id="dtModalTitle">Edit generated report</h3><p id="dtModalDesc">All content is fictional and local to this demo.</p><textarea id="dtModalText">Operations should review vendor onboarding risks, unresolved ownership, and support escalation steps before approval. Citations: [DOC-02 §4], [CON-03 §7].</textarea><div class="dt-actions" style="margin-top:14px"><button class="dt-btn primary" data-dt-save>Save draft</button><button class="dt-btn" data-dt-modal-close>Cancel</button></div></div></div>
+<script>
+(function(){
+ const $=s=>document.querySelector(s); const panel=$('#dtPanel'), title=$('#dtTitle'), desc=$('#dtDesc'), body=$('#dtBody'), modal=$('#dtModal');
+ function toast(msg){const old=document.querySelector('.dt-toast'); if(old) old.remove(); const el=document.createElement('div'); el.className='dt-toast'; el.innerHTML=msg; document.body.appendChild(el); setTimeout(()=>el.remove(),4200)}
+ function openPanel(t,d,html){title.textContent=t;desc.textContent=d;body.innerHTML=html;panel.classList.add('open')}
+ function closePanel(){panel.classList.remove('open')}
+ function item(t,s){return `<div class="dt-item"><b>${t}</b><span>${s}</span></div>`}
+ function download(name, text, type='text/markdown'){const blob=new Blob([text],{type}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=name; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000)}
+ async function runReport(){toast('<b>Report generated.</b> Retrieval, citation check and export package are ready.'); setTimeout(()=>{window.top.location.href='/report'},450)}
+ async function askRag(){const res=await fetch('/api/query/demo',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question:'What risks should operations review before approving vendor onboarding?'})}).then(r=>r.json()); openPanel('Grounded RAG answer','Answer generated from seeded excerpts, not external systems.', `${item('Answer',res.answer)}${res.sources.map(s=>item(s.citation,`${s.source} · ${s.confidence}% match<br>${s.snippet}`)).join('')}<div class="dt-actions"><button class="dt-btn primary" data-report>Generate report from answer</button><button class="dt-btn" data-export-md>Export Markdown</button></div>`)}
+ function uploadPanel(){openPanel('Upload & index documents','Safe demo upload: files are simulated; no external storage.', `${item('Vendor_Policy_2024.pdf','Indexed · 86 chunks · PyPDF parser · citation namespace DOC-02')}${item('Meeting_Notes_Aug.txt','Indexed · 34 chunks · TXT parser · citation namespace MOM-01')}${item('MSA_Final_v2.docx','Indexed · 112 chunks · document parser · citation namespace CON-03')}<div class="dt-item"><b>Indexing progress</b><span>Q3_Ops_Log.xlsx · 85% complete</span><div class="dt-bar"><i style="width:85%"></i></div></div><div class="dt-actions"><button class="dt-btn success" data-index>Simulate indexing complete</button><button class="dt-btn primary" data-ask>Ask grounded question</button></div>`)}
+ function libraryPanel(){openPanel('Document library','Fictional portfolio seed data with chunk counts and citations.', `${item('Vendor_Policy_2024.pdf','DOC-02 · 86 chunks · vendor onboarding controls, payment approvals, escalation paths')}${item('Meeting_Notes_Aug.txt','MOM-01 · 34 chunks · operations review meeting notes')}${item('MSA_Final_v2.docx','CON-03 · 112 chunks · service agreement responsibilities and renewal clauses')}${item('Support_SOP.md','SOP-04 · 58 chunks · internal support handoff process')}`)}
+ function exportsPanel(){openPanel('Exports','Download safe generated artifacts for proposals or review.', `${item('Operations Risk Brief.md','Markdown report with citations and source links')}${item('source-excerpts.json','Structured retrieved snippets and confidence values')}${item('architecture-notes.md','RAG pipeline explanation for client proposals')}<div class="dt-actions"><button class="dt-btn primary" data-export-md>Export Markdown</button><button class="dt-btn" data-export-json>Export JSON</button></div>`)}
+ function settingsPanel(){openPanel('Settings / AI Provider','Demo-safe configuration only; no private keys required.', `${item('Provider abstraction','OpenAI-compatible interface simulated with seeded responses')}${item('Embeddings','Mock vector index with deterministic source snippets')}${item('Safety','No legal conclusions, no compliance certification, citations always visible')}`)}
+ function reportInfo(){openPanel('Report Builder','Generate a structured report grounded in retrieved context.', `${item('Operations Risk Brief','Summary · Key Facts · Risks · Open Questions · Next Steps')}${item('Citation policy','Every claim links to [DOC-02], [MOM-01] or [CON-03] source snippets.')}<div class="dt-actions"><button class="dt-btn primary" data-report>Generate report</button><button class="dt-btn" data-edit>Edit draft</button></div>`)}
+ document.addEventListener('click',e=>{
+   const close=e.target.closest('[data-dt-close]'); if(close){closePanel();return}
+   if(e.target.closest('[data-dt-modal-close]')){modal.classList.remove('open');return}
+   if(e.target.closest('[data-dt-save]')){modal.classList.remove('open');toast('<b>Draft saved.</b> Report body updated locally.');return}
+   if(e.target.closest('[data-index]')){toast('<b>Index complete.</b> 4 docs · 290 chunks · citations ready.');return}
+   if(e.target.closest('[data-ask]')){askRag();return}
+   if(e.target.closest('[data-report]')){runReport();return}
+   if(e.target.closest('[data-edit]')){modal.classList.add('open');return}
+   if(e.target.closest('[data-export-md]')){download('doctrace-operations-risk-brief.md', '# Operations Risk Brief\n\nGrounding score: 98%\n\n## Summary\nVendor onboarding can proceed after ownership, escalation and renewal-risk questions are reviewed.\n\nCitations: [DOC-02 §4], [MOM-01 p.2], [CON-03 §7]\n'); toast('<b>Markdown exported.</b> Safe local download generated.');return}
+   if(e.target.closest('[data-export-json]')){download('doctrace-sources.json', JSON.stringify({sources:['DOC-02 §4','MOM-01 p.2','CON-03 §7'],confidence:[94,91,89]},null,2),'application/json'); toast('<b>JSON exported.</b> Source evidence package downloaded.');return}
+   const el=e.target.closest('button,a,[role="button"]'); if(!el) return; const txt=(el.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
+   if(txt.includes('dashboard')){e.preventDefault(); window.top.location.href='/'; return}
+   if(txt.includes('report builder')||txt.includes('export markdown')||txt.includes('export pdf')){e.preventDefault(); if(txt.includes('export')){download('doctrace-operations-risk-brief.md','# Operations Risk Brief\n\nExported from DocTrace AI demo.\n'); toast('<b>Export ready.</b> Markdown/PDF action simulated safely.')} else reportInfo(); return}
+   if(txt.includes('upload')){e.preventDefault(); uploadPanel(); return}
+   if(txt.includes('library')||txt.includes('view all')||txt==='view'){e.preventDefault(); libraryPanel(); return}
+   if(txt.includes('ask rag')||txt.includes('psychology')){e.preventDefault(); askRag(); return}
+   if(txt.includes('exports')){e.preventDefault(); exportsPanel(); return}
+   if(txt.includes('settings')){e.preventDefault(); settingsPanel(); return}
+   if(txt.includes('docs')){e.preventDefault(); openPanel('Documentation','Implementation notes for reviewers.', `${item('Stack','Next.js + TypeScript public demo, API mocks, FastAPI-ready architecture notes')}${item('Pipeline','Parse → chunk → embed → retrieve → generate → citation check → export')}`); return}
+   if(txt.includes('support')){e.preventDefault(); openPanel('Support','Demo-safe support channel.', `${item('Portfolio note','This is a public mock demo: no customer data, no external sends, no credentials required.')}`); return}
+   if(txt.includes('notifications')){e.preventDefault(); toast('<b>No alerts.</b> Latest citation check passed.'); return}
+ });
+ window.DocTraceDemo={uploadPanel,libraryPanel,askRag,reportInfo,exportsPanel,settingsPanel,closePanel};
+})();
+</script>
+<!-- DOCTRACE_INTERACTION_END -->
+</body></html>
