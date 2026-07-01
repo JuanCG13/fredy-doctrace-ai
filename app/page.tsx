@@ -1,2 +1,11 @@
+import { ResponsiveStitchFrame } from "./components/ResponsiveStitchFrame";
 
-export default function Home(){return <iframe className="stitch-frame" src="/stitch/dashboard.html" title="DocTrace AI Processing Cockpit"/>}
+export default function Home() {
+  return (
+    <ResponsiveStitchFrame
+      src="/stitch/dashboard.html"
+      title="DocTrace AI Processing Cockpit"
+      label="DocTrace AI Processing Cockpit"
+    />
+  );
+}
